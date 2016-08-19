@@ -1,0 +1,119 @@
+.autocar-select-sidebar{
+width:40px;
+height:40px;
+float:left;
+margin-right:10px;
+padding:2px;
+padding-bottom:0px;
+cursor:pointer;
+background:#808080;
+}
+.autocar-select-sidebar img{
+width:100%;
+margin-bottom:0px;
+}
+.autocar_chooseborder{
+background:#000;
+}
+/** Demo intall css start **/
+.autocar_install_instruction{
+    background-color: #F5FAFD;
+    margin: 10px 0;
+    padding: 5px 10px;
+    color: #0C518F;
+    border: 2px solid #CAE0F3;
+    clear: both;
+    width: 90%;
+    line-height: 18px;	
+}
+ul.autocar_install_list{
+	padding-left: 20px;
+}
+ul.autocar_install_list li{
+	width: 100%;	
+	list-style-position: inside;
+	list-style-type: square;
+}
+.autocar_error_msg {
+    color: red;
+}
+.autocar_success_msg {
+    color: green;
+}
+.autocar_after_msg {
+    background: #fff;
+    width: 90%;
+    padding: 5px;
+    border: 1px solid #CAE0F3;
+    color: #00a0d2;
+}
+/** Demo intall css end **/
+
+.autocar_wrapper{
+    max-width: 90%;
+    margin: 20px auto;
+    background: #FBFBFB;
+    box-shadow: 0px 0px 1px #ccc;
+    padding: 20px;
+    color: black;
+    float: left;
+    width: 90%;
+}
+.autocar_bottom_section{
+	float: left;
+    width: 100%;
+}
+.autocar_bottom_section .autocar_top_tabs{
+	float: left;
+	width: 100%;
+}
+
+.autocar_right_section .autocar_input_section {
+    float: left;
+    width: 100%;
+    margin-bottom: 20px;
+	position: relative;
+}
+.autocar_right_section .autocar_input_section label{
+    float: left;
+    width: 20%;
+    text-transform: capitalize;
+    font-size: 13px;
+    color: #333;
+    margin: 9px 0px;
+}
+.autocar_right_section .autocar_input_section input[type="text"], .autocar_right_section .autocar_input_section input[type="email"], .autocar_right_section .autocar_input_section select{
+    width: 65%;
+    padding: .375rem .75rem;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #55595c;
+    background-color: #fff;
+    background-image: none;
+    border: .0625rem solid #ccc;	
+    height: auto;	
+}
+
+#autocar_schedulebtn {
+    background: #3f80c7;
+    border: none;
+    box-shadow: none;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 15px;
+	cursor: pointer;	
+}
+#autocar_schedulebtn:hover {
+	background: #144A84;
+}
+
+.autocar_loading {
+    background: url(../images/ajax-loader.gif) no-repeat center;
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    top: 15%;
+    z-index: 100;
+    left: 11%;
+	display:none;
+}

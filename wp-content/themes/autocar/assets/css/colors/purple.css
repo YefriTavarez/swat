@@ -1,0 +1,76 @@
+/* color start*/
+
+.ac_info_wrapper,.search-section .search-content .search-heading h2,.pre-header .right-info ul li a:hover,footer .footer-item ul li a:hover,.second-line em{
+	color: #009688;
+}
+
+.site-header, .services .services-content .service-item .service-baner a,.pre-header .logo a{
+	background-color: #3D2639;
+}
+nav.main-navigation ul li ul.sub-menu{
+	border-top: 3px solid #3D2639;
+}
+.dc_search_icon a,.recent_car_wrapper:hover h4 a,.testimonials .item ul li.autocar_rivew,footer .footer-item .recent-posts .recent-item h4:hover,footer .footer-item .recent-posts .recent-item span,.page-heading .heading-content-bg .go-back ul li a:hover,.car-details ul li p,.more-details .info-list ul li i,.blog-page .blog-classic-post .item ul li a,.blog-page .blog-grid-post .item .down-content ul li a,.blog-page .single-post .item ul li a, .atc_metadata ul li span a{
+	color: #3D2639;
+}
+nav.main-navigation ul li ul.sub-menu a:hover,.shortcodes-content .accordions .accordion-section-title:hover,.sidebar-widgets .item ul li a:hover,.entry-footer span a{
+    color: #3D2639;
+}
+.search-section,.section-heading i ,.blury-bg i,.blury-bg .info-item:hover .line-dec,.blury-bg i:after,.line-dec-second,.car-details .contact-info i,.more-details .contact-info i,input[type="submit"]:hover,.sidebar-widgets .item ul li a:before,.pagination-content ul li.active,.pagination-content ul li:hover,.header-right-toggle a,.contact-content .contact-info i,.compare_heading h1,.owl-pagination{
+	background-color: #3D2639;
+}
+.search-section .search-content .search-heading i,.car-search-submit,.primary-button a,.white-button a:before,.atc_searchform .search-submit,.widget_search .search-submit{
+	background-color: #009688;
+}
+.slider-selection, .slider-handle {
+    background-color: #3D2639!important;
+    background-image: none!important;
+}
+.primary-button a:before, .ac_notification_btn a:before, .white-button a{
+	    background: #3D2639;
+}
+.ac_price_wrapper {
+	background-color: rgba(61, 38, 57, 0.95);
+}
+.recent_car_img .ac_overlay a,.ac_car_action ul li a{
+	color: #3D2639;
+	border: 1px solid #3D2639;
+}
+.go-top,.latest-news #owl-blog .item .thumb-content .date-post,.latest-news #owl-blog .item-2 .thumb-content .date-post,.car-item .thumb-content .car-banner-rent a{
+	background-color: rgba(61, 38, 57, 0.9)!important; 
+}
+.vc_tta-color-grey.vc_tta-style-classic .vc_tta-tab.vc_active>a{
+	 background-color: #3D2639!important;
+}
+.vc_progress_bar .vc_general.vc_single_bar.vc_progress-bar-color-grey .vc_bar, .vc_progress_bar.vc_progress-bar-color-grey .vc_single_bar .vc_bar{
+	 background-color: #3D2639!important;
+}
+.flex-control-paging li a{
+	    border: 2px solid #3D2639;
+}
+.ac_car_list_wrapper:hover{
+	border: 1px solid #3D2639;
+}
+.blog-page .blog-classic-post .item img,.blog-page .blog-grid-post .item img,.blog-page .single-post .item img{
+	border-bottom: 3px solid #3D2639;
+}
+.blog-page .single-post .comments .comments-content .continue-button a:hover, .autocar_page .comments .comments-content .continue-button a:hover{
+	color: #3D2639;
+}
+.car-search-submit:before{
+	    background-color: #009688;
+}
+.call-to-action .call-to-action-content p em{
+	color: #009688;
+}
+#style-switcher h2 {
+    background-color: #3D2639;
+}
+#reset button {
+    background-color: #3D2639;
+}
+@media (max-width: 991px){
+	.scrolled-header {
+		    background-color: rgba(61, 38, 57, 0.95) !important;
+	}
+}
