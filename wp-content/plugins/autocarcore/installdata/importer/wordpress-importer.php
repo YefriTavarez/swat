@@ -1125,7 +1125,7 @@ class WP_Import extends WP_Importer {
 
 } // class_exists( 'WP_Importer' )
 
-function wordpress_importer_init() {
+function wordpress_importer_init3() {
 	load_plugin_textdomain( 'masons', false, dirname( plugin_basename( __FILE__ ) ) . '/languages' );
 
 	/**

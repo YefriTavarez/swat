@@ -2,19 +2,11 @@
 # BEGIN WordPress
 <IfModule mod_rewrite.c>
 RewriteEngine On
-RewriteBase /
+RewriteBase /website/
 RewriteRule ^index\.php$ - [L]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule . /index.php [L]
-</IfModule>
-<IfModule mod_php5.c>
-php_value post_max_size 80M
-php_value upload_max_filesize 64M
-php_value memory_limit 256M
-php_value max_execution_time 3000
-php_value max_input_time 3000
-php_value session.gc_maxlifetime 1440
+RewriteRule . /website/index.php [L]
 </IfModule>
 
 # END WordPress
