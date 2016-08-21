@@ -195,3 +195,5 @@ require_once get_template_directory().'/vendor/include/autocar-enqueue.php';
 require_once get_template_directory().'/vendor/autocar-function.php';
 require_once get_template_directory().'/vendor/theme_plugin/plugin-activate-config.php';
 require_once get_template_directory().'/vendor/include/meta-option.php';
+require_once get_template_directory().'/vendor/shortcodes.php';
+

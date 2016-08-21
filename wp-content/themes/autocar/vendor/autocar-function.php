@@ -189,7 +189,7 @@ function autocar_breadcrumb() {
     echo '<ul id="breadcrumbs">';
 if (!is_home()) {
 	if( !is_archive() ){
-		echo '<li><a href="'. esc_url( home_url( '/' ) ) .'">'.esc_html__('Home','autocar').'</a></li><li class="separator"> / </li>';
+		echo '<li><a href="'. esc_url( home_url( '/' ) ) .'">'.esc_html__('Inicio','autocar').'</a></li><li class="separator"> / </li>';
 	}
 	if (is_category() || is_single()) {
 		echo '<li>';
