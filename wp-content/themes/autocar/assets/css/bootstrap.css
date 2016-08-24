@@ -919,6 +919,7 @@ img {
   width: 100% \9;
   max-width: 100%;
   height: auto;
+  /*padding:5%;** added by: Lewin*/
 }
 .img-rounded {
   border-radius: 0px;

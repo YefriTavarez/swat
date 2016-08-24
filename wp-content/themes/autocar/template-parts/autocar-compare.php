@@ -23,7 +23,7 @@ $third = isset($arr[2]) ? $arr[2] : '';
 				<div class="col-md-3 hidden-xs">
 					<div class="ac_compare_wrapper">
 						<div class="compare_heading">
-							<h1><?php esc_html_e('compare car','autocar'); ?></h1>
+							<h1><?php esc_html_e('comparar vehiculos','autocar'); ?></h1>
 						</div>
 						<div class="ac_compare_list">
 							<ul>
@@ -31,7 +31,7 @@ $third = isset($arr[2]) ? $arr[2] : '';
 							</ul>
 						</div>
 						<div class="ac_compare_featurelist">
-							<h3><?php esc_html_e('Additional Features','autocar'); ?></h3>
+							<h3><?php esc_html_e('accesorios','autocar'); ?></h3>
 						</div>
 					</div>
 				</div>

@@ -25,28 +25,28 @@ class Car_Dealer_Fields {
 		add_filter( 'acf/field_group/get_fields', array( $this, 'acf_fields_translatable' ), 2, 2 );
 
 		$color_choices = array_unique( array_merge( array (
-			__( 'Silver', 'progression-car-dealer' ),
-			__( 'Black', 'progression-car-dealer' ),
-			__( 'White', 'progression-car-dealer' ),
-			__( 'Red', 'progression-car-dealer' ),
-			__( 'Blue', 'progression-car-dealer' ),
-			__( 'Brown/Beige', 'progression-car-dealer' ),
-			__( 'Yellow', 'progression-car-dealer' ),
-			__( 'Green', 'progression-car-dealer' ),
+			__( 'Plateado', 'progression-car-dealer' ),
+			__( 'Negro', 'progression-car-dealer' ),
+			__( 'Blanco', 'progression-car-dealer' ),
+			__( 'Rojo', 'progression-car-dealer' ),
+			__( 'Azul', 'progression-car-dealer' ),
+			__( 'Marron/Beige', 'progression-car-dealer' ),
+			__( 'Amarrillo', 'progression-car-dealer' ),
+			__( 'Verde', 'progression-car-dealer' ),
 		), $this->get_meta_values( 'color', 'vehicle' ) ));
 		$color_choices = array_combine( $color_choices, $color_choices);
 
 		$int_color_choices = array_unique( array_merge( array (
-			'black' => __( 'Black', 'progression-car-dealer' ),
-			'white' => __( 'White', 'progression-car-dealer' ),
-			'brown' => __( 'Brown (Leather)', 'progression-car-dealer' )
+			'black' => __( 'Negro', 'progression-car-dealer' ),
+			'white' => __( 'Blanco', 'progression-car-dealer' ),
+			'brown' => __( 'Marron (Leather)', 'progression-car-dealer' )
 		), $this->get_meta_values( 'interior', 'vehicle' ) ));
 		$int_color_choices = array_combine( $int_color_choices, $int_color_choices);
 
 
 		$this->built_in = array(
 			'vehicle_type' => array (
-				'label' => __( 'Vehicle Type', 'progression-car-dealer' ),
+				'label' => __( 'Tipo de Vehiculo', 'progression-car-dealer' ),
 				'name' => 'vehicle_type',
 				'type' => 'taxonomy',
 				'taxonomy' => 'vehicle_type',
@@ -54,7 +54,7 @@ class Car_Dealer_Fields {
 				'group' => 'overview'
 			),
 			'make' => array (
-				'label' => __( 'Make', 'progression-car-dealer' ),
+				'label' => __( 'Marca', 'progression-car-dealer' ),
 				'name' => 'make',
 				'type' => 'taxonomy',
 				'taxonomy' => 'make',
@@ -64,7 +64,7 @@ class Car_Dealer_Fields {
 				'allow_null' => 0
 			),
 			'model' => array (
-				'label' => __( 'Model', 'progression-car-dealer' ),
+				'label' => __( 'Modelo', 'progression-car-dealer' ),
 				'name' => 'model',
 				'type' => 'taxonomy',
 				'taxonomy' => 'model',
@@ -74,7 +74,7 @@ class Car_Dealer_Fields {
 				'allow_null' => 0
 			),
 			'price' => array(
-				'label' => __( 'Price', 'progression-car-dealer' ),
+				'label' => __( 'Precio', 'progression-car-dealer' ),
 				'name' => 'price',
 				'instructions' => __( "The price that the customer will have to pay.", 'progression-car-dealer' ),
 				'type' => 'number',
@@ -89,7 +89,7 @@ class Car_Dealer_Fields {
 				'sort' => 15,
 			),
 			'msrp' => array(
-				'label' => __( 'MSRP', 'progression-car-dealer' ),
+				'label' => __( 'Precio Sugerido por el Fabricante', 'progression-car-dealer' ),
 				'name' => 'msrp',
 				'instructions' => __( "Use integers to set the listing price.", 'progression-car-dealer' ),
 				'type' => 'number',
@@ -104,7 +104,7 @@ class Car_Dealer_Fields {
 				'sort' => 10,
 			),
 			'registration' => array (
-				'label' => __( 'Registration date', 'progression-car-dealer' ),
+				'label' => __( 'Fecha de Registro', 'progression-car-dealer' ),
 				'name' => 'registration',
 				'type' => 'number',
 				'instructions' => __( 'The year of first registration', 'progression-car-dealer' ),
@@ -116,7 +116,7 @@ class Car_Dealer_Fields {
 				'sort' => 15,
 			),
 			'milage' => array(
-				'label' => __( 'Mileage', 'progression-car-dealer' ),
+				'label' => __( 'Kilometraje', 'progression-car-dealer' ),
 				'name' => 'milage',
 				'type' => 'number',
 				'instructions' => __( 'The number of miles travelled or covered', 'progression-car-dealer' ),
@@ -127,7 +127,7 @@ class Car_Dealer_Fields {
 				'sort' => 20
 			),
 			'condition' => array(
-				'label' => __( 'Condition', 'progression-car-dealer' ),
+				'label' => __( 'Condicion', 'progression-car-dealer' ),
 				'name' => 'condition',
 				'instructions' => '',
 				'type' => 'radio',
@@ -141,7 +141,7 @@ class Car_Dealer_Fields {
 				'sort' => 30
 			),
 			'color' => array(
-				'label' => __( 'Exterior Color', 'progression-car-dealer' ),
+				'label' => __( 'Color Exterior', 'progression-car-dealer' ),
 				'name' => 'color',
 				'type' => 'radio',
 				'choices' => $color_choices,
@@ -152,7 +152,7 @@ class Car_Dealer_Fields {
 				'sort' => 40,
 			),
 			'interior' => array(
-				'label' => __( 'Interior Color', 'progression-car-dealer' ),
+				'label' => __( 'Color Interior', 'progression-car-dealer' ),
 				'name' => 'interior',
 				'type' => 'radio',
 				'choices' => $int_color_choices,
@@ -163,11 +163,11 @@ class Car_Dealer_Fields {
 				'sort' => 50,
 			),
 			'transmission' => array(
-				'label' => __( 'Transmission', 'progression-car-dealer' ),
+				'label' => __( 'Transmision', 'progression-car-dealer' ),
 				'name' => 'transmission',
 				'type' => 'radio',
 				'choices' => array (
-					'auto' => __( 'Automatic', 'progression-car-dealer' ),
+					'auto' => __( 'Automatica', 'progression-car-dealer' ),
 					'manual' => __( 'Manual', 'progression-car-dealer' ),
 				),
 				'default_value' => '',
@@ -175,7 +175,7 @@ class Car_Dealer_Fields {
 				'sort' => 60,
 			),
 			'engine' => array (
-				'label' => __( 'Engine', 'progression-car-dealer' ),
+				'label' => __( 'Motor', 'progression-car-dealer' ),
 				'name' => 'engine',
 				'instructions' => __( 'The displacement the engine gives in Litres', 'progression-car-dealer' ),
 				'append' => 'L',
@@ -186,7 +186,7 @@ class Car_Dealer_Fields {
 				'max' => 10
 			),
 			'drivetrain' => array(
-				'label' => __( 'Drivetrain', 'progression-car-dealer' ),
+				'label' => __( 'Traccion', 'progression-car-dealer' ),
 				'name' => 'drivetrain',
 				'type' => 'radio',
 				'choices' => array (

@@ -136,7 +136,7 @@ class Car_Dealer_Shortcodes {
 			'exclude'   => 'msrp',
 			'action' 	=> get_post_type_archive_link( 'vehicle' ), // action url,
 	        'form'		=> 'true',
-	        'button' 	=> __( 'Search Inventory', 'progression-car-dealer' ),
+	        'button' 	=> __( 'Buscar', 'progression-car-dealer' ),
 	        'form_atts' => ''
 		);
 		extract( shortcode_atts( apply_filters( 'pcd/searchform/defaults', $defaults ), $shortcode_atts ) );
@@ -506,7 +506,7 @@ $meta_query = array(
 		return array_merge( $range, array( 0, 15000,30000,45000,60000,75000,100000,150000,200000 ));
 	}
 	public function get_range_for_price( $range ) {
-		return array_merge( $range, array( 1000,2000,3000,4000,5000,6000,7000,8000,9000,10000,11000,12000,13000,14000,15000,16000,17000,18000,19000,20000,22000,24000,26000,28000,30000,35000,40000,45000,50000,55000,60000,65000,70000,75000,80000,85000,90000,95000,100000 ));
+		return array_merge( $range, array( 50000,55000,60000,65000,70000,75000,80000,85000,90000,95000,100000,200000,300000,400000,500000,600000,700000,800000,900000,1000000,2000000,10000000 ));
 	}
 	public function get_range_for_registration() {
 		global $car_dealer;

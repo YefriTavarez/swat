@@ -1210,18 +1210,22 @@ function autocar_featured_recent_func( $atts ) {
 										$result .= '<img src="'.esc_url($feat_image_url[0]).'" alt="">';
 										if( !empty( $car_purpose ) ) {
 											if( $car_purpose == 'car-banner-sale' ) {
-											$result .= '<div class="ac_service_content"><div class="service-baner">
-											<a href="'.esc_url(get_the_permalink()).'"><span>'.esc_html__('For Sale', 'autocar').'</span></a>
-														</div>';				
-										} else {
-										$result .= '<div class="ac_service_content"><div class="service-baner">
-												<a href="'.esc_url(get_the_permalink()).'"><span>'.esc_html__('For Rent', 'autocar').'</span></a>
+												$result .= '<div class="ac_service_content"><div class="service-baner">
+												<a href="'.esc_url(get_the_permalink()).'"><span>'.esc_html__('Seguridad', 'autocar').'</span></a>
+															</div>';				
+											} else if($car_purpose == 'car-banner-rent'){
+												$result .= '<div class="ac_service_content"><div class="service-baner">
+													<a href="'.esc_url(get_the_permalink()).'"><span>'.esc_html__('Financiamiento', 'autocar').'</span></a>
+													</div>';
+											} else {
+												$result .= '<div class="ac_service_content"><div class="service-baner">
+													<a href="'.esc_url(get_the_permalink()).'"><span>'.esc_html__('Comfort', 'autocar').'</span></a>
 													</div>';
 											}
 										}
 										$result .= '<p>'.get_the_excerpt().'</p>';
 										$result .= '<div class="primary-button">';
-											$result .= '<a href="'.get_the_permalink().'">'.esc_html__('Read More','autocar').'</a>';
+											$result .= '<a href="'.get_the_permalink().'">'.esc_html__('Leer mas','autocar').'</a>';
 										$result .= '</div></div>';
 									$result .= '</div>';
 								$result .= '</div>';
@@ -1265,9 +1269,11 @@ function autocar_featured_recent_func( $atts ) {
 									$result .= '<div class="thumb-content">';
 										if( !empty( $car_purpose ) ) {
 											if( $car_purpose == 'car-banner-sale' ) {
-												$result .= '<div class="'.esc_attr( $car_purpose ).'"><a href="'.get_the_permalink().'">'.esc_html__('For Sale', 'autocar').'</a></div>';				
+												$result .= '<div class="'.esc_attr( $car_purpose ).'"><a href="'.get_the_permalink().'">'.esc_html__('En Venta', 'autocar').'</a></div>';				
+											} else if($car_purpose == 'car-banner-rent') {
+												$result .= '<div class="'.esc_attr( $car_purpose ).'"><a href="'.get_the_permalink().'">'.esc_html__('Se Renta', 'autocar').'</a></div>';
 											} else {
-												$result .= '<div class="'.esc_attr( $car_purpose ).'"><a href="'.get_the_permalink().'">'.esc_html__('For Rent', 'autocar').'</a></div>';
+												$result .= '<div class="'.esc_attr( $car_purpose ).'"><a href="'.get_the_permalink().'">'.esc_html__('Presta', 'autocar').'</a></div>';
 											}
 										}
 

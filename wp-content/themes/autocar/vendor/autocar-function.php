@@ -527,7 +527,8 @@ function autocar_compare_itemsadd(){
 	echo '<div class="col-md-3">';
 		echo '<div class="ac_compare_wrapper">';
 			echo '<div class="compare_heading">';
-				echo '<a href="',esc_url( home_url() ),'" class="compare_link"><i class="fa fa-plus"></i>',esc_html__('add to compare','autocar'),'</a>';
+				echo '<a href="',esc_url( home_url() ),'" class="compare_link"><i class="fa fa-plus"></i>',esc_html__('Agregar
+				Comparar','autocar'),'</a>';
 			echo '</div>';
 			echo '<div class="ac_car_property">';
 				echo '<ul>';
@@ -551,7 +552,7 @@ function autocar_compare_itemsremove($id){
 						}
 						echo '<a href="#"><img src="',esc_url($src),'" alt=""></a>';
 						echo '<div class="remove_btn_wrapper primary-button">';
-							echo '<a href="javascript:;" class="autocar_remove_comparecar" data-carId="'.esc_attr($id).'">',esc_html__('remove from list','autocar'),'</a>';
+							echo '<a href="javascript:;" class="autocar_remove_comparecar" data-carId="'.esc_attr($id).'">',esc_html__('eliminar de lista','autocar'),'</a>';
 						echo '</div>';
 					echo '</div>';
 					echo '<div class="down-content">';

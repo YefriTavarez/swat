@@ -237,13 +237,14 @@ p {
 .pre-header .logo.text_logo a {
     padding: 20px 0px;
     color: #ffffff;
-    font-size: 24px;
+    font-size: 33px;
     text-transform: uppercase;
     font-weight: 700;
     text-align: center;
     width: 180px;
     height: 90px;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    line-height: 1.2;
 }
 .pre-header .logo.text_logo a em {
     margin-top: 0;
@@ -3043,11 +3044,11 @@ html[xmlns] .car-flexslider .slides {
     margin-top: -37.5px;
 }
 .services .services-content .service-item .service-baner a {
-	width: 65px;
-    height: 65px;
+	width: 125px;
+    height: 115px;
     line-height: 65px;
     color: #ffffff;
-    font-size: 15px;
+    font-size: 14px;
     font-weight: bold;
     text-transform: capitalize;
     background-color: #ffba00;
@@ -3468,7 +3469,7 @@ html[xmlns] .car-flexslider .slides {
   margin-top: 0px;
   margin-bottom: 5px;
   font-size: 15px;
-  color: #272727;
+  color: #f59120;
   font-weight: 700;
   text-transform: uppercase;
 }
@@ -5062,10 +5063,12 @@ background-color: rgba(255, 186, 0, 0.9);
 }
 .ac_info_wrapper a {
     color: #fff;
+	  font-size: 18px;
+    font-weight: bold;
 }
 .ac_info_wrapper h3 {
     color: #fff;
-    font-size: 24px;
+    font-size: 17px;
     font-weight: bold;
     margin: 0;
 }
