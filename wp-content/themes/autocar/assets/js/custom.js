@@ -498,8 +498,8 @@
 						var r = '<i class="fa fa-times" aria-hidden="true"></i>';
 						var a = '<i class="fa fa-tachometer"></i>';
 					}else{
-						var r = 'Remove from list';
-						var a = 'Add to compare';
+						var r = 'Eliminar de lista';
+						var a = 'Agregar comparar';
 					}
 					
 					if(res.success){
@@ -539,8 +539,8 @@
 						var r = '<i class="fa fa-times" aria-hidden="true"></i>';
 						var a = '<i class="fa fa-tachometer"></i>';
 					}else{
-						var r = 'Remove from list';
-						var a = 'Add to compare';
+						var r = 'Eliminar de lista';
+						var a = 'Agregar comparar';
 					}
 					
 					if(res.success){

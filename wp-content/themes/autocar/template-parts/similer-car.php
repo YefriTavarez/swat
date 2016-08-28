@@ -28,8 +28,8 @@ if(is_array($categories) && !empty($categories)){
 					<div class="section-heading">
 						<i class="fa fa-car"></i>
 						<div class="atc_sect_heading">
-						<h2><?php esc_html_e('Similar Cars','autocar'); ?></h2>
-						<span><?php esc_html_e('You may like thoose too','autocar'); ?></span>
+						<h2><?php esc_html_e('Vehiculos similares','autocar'); ?></h2>
+						<span><?php esc_html_e('Quizás te gusten algunos de estos','autocar'); ?></span>
 						</div>
 					</div>
 				</div>
@@ -39,7 +39,7 @@ if(is_array($categories) && !empty($categories)){
 				<div class="car-item">
 					<div class="thumb-content">
 						<div class="car-banner-rent">
-							<a href="<?php echo esc_url(get_the_permalink($post->ID)); ?>"><?php esc_html_e('Model:','autocar'); ?> 
+							<a href="<?php echo esc_url(get_the_permalink($post->ID)); ?>"><?php esc_html_e('Modelo:','autocar'); ?> 
 							<?php
 							$categories = get_the_terms($post->ID,'model');
 							foreach($categories as $category) {      

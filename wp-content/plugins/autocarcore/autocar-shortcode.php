@@ -1219,7 +1219,7 @@ function autocar_featured_recent_func( $atts ) {
 													</div>';
 											} else {
 												$result .= '<div class="ac_service_content"><div class="service-baner">
-													<a href="'.esc_url(get_the_permalink()).'"><span>'.esc_html__('Comfort', 'autocar').'</span></a>
+													<a href="'.esc_url(get_the_permalink()).'"><span>'.esc_html__('Confort', 'autocar').'</span></a>
 													</div>';
 											}
 										}
@@ -1498,10 +1498,10 @@ function autocar_car_listing_func( $atts ) {
 								if($schedule == 'enable'){
 									$result .= '<li><a href="javascript:;" class="autocar_schedule" data-title="'.esc_attr(get_the_title($post->ID)).'">'.esc_html__('Schedule Test Drive','autocar').'</a></li>';
 								}
-								$result .= '<li><a href="'.esc_url($brochure).'" class="autocar_brochure" download>'.esc_html__('Brochure','autocar').'</a></li>';
+								$result .= '<li><a href="'.esc_url($brochure).'" class="autocar_brochure" download>'.esc_html__('Manual','autocar').'</a></li>';
 								$result .= '<li>';
 									$text = check_is_compare_id($post->ID);
-									$result .= '<a href="javascript:;" class="'.esc_attr($text['cls']).'" data-carId="'.esc_attr($post->ID).'" data-aicon="false">'.esc_html($text['txt']).'</a>';
+									$result .= '<a href="javascript:;" class="'.esc_attr($text['cls']).'" data-carId="'.esc_attr($post->ID).'" data-aicon="false">'.esc_html('Agregar comparar').'</a>';
 								$result .= '</li>';
 							$result .= '</ul>';
 							$result .= '</div>';							
@@ -1522,7 +1522,7 @@ function autocar_car_listing_func( $atts ) {
 									$result .= '<li><div class="car_info_content">';
 									$label = $field['label'];
 									$name  = $field['name'];
-									$result .= '<span>'.esc_html($name).'</span>';
+									$result .= '<span>'.esc_html($label).'</span>';
 									$value = get_field( $field['name'], $post->ID );
 
 									if ( $value ) { 

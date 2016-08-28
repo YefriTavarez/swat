@@ -8,7 +8,7 @@
 			</div>
 			<div class="col-lg-3 col-md-3">
 				<div class="ac_notification_btn">
-					<a href="<?php echo esc_url(get_permalink( get_page_by_path( 'compare' ) )); ?>"><?php esc_html_e('compare','autocar'); ?></a>
+					<a href="<?php echo esc_url(get_permalink( get_page_by_path( 'compare' ) )); ?>"><?php esc_html_e('comparar','autocar'); ?></a>
 				</div>
 			</div>
 		</div>

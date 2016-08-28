@@ -173,7 +173,7 @@ function autocar_compare(){
 		$cookiearr = isset($_COOKIE['autocar_car_items']) ? $_COOKIE['autocar_car_items'] : '';
 		
 		if(! empty( $cookiearr ) && count(explode(',',$cookiearr)) >= 3){
-			echo json_encode(array('message' => esc_html__('You have already added 3 cars','autocar') ));
+			echo json_encode(array('message' => esc_html__('Ya has agregado 3 vehículos para comparar','autocar') ));
 			die();
 		}elseif(! empty( $cookiearr ) ){
 			$cookiearr .= ','.$_POST['carId'];
@@ -181,7 +181,7 @@ function autocar_compare(){
 			$cookiearr .= $_POST['carId'];
 		}
 		setcookie('autocar_car_items', $cookiearr, time() + (86400 * 30), "/");
-		echo json_encode(array('success'=>true, 'message'=> get_the_title($_POST['carId']).' - '.esc_html__('Added to compare','autocar') ));
+		echo json_encode(array('success'=>true, 'message'=> get_the_title($_POST['carId']).' - '.esc_html__('Agregado para comparar','autocar') ));
 		
 	}
 	die();
@@ -225,7 +225,7 @@ function autocar_remove_compare(){
 		autocar_compare_itemsadd();
 		$html = ob_get_clean();
 		
-		echo json_encode(array('success'=>true, 'message'=> get_the_title($_POST['carId']).' '.esc_html__('have removed from compare list.','autocar'), 'html' => $html ));
+		echo json_encode(array('success'=>true, 'message'=> get_the_title($_POST['carId']).' '.esc_html__('ha sido removido de la lista de comparación.','autocar'), 'html' => $html ));
 		
 	}
 	die();

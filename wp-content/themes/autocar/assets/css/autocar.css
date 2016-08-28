@@ -3469,7 +3469,7 @@ html[xmlns] .car-flexslider .slides {
   margin-top: 0px;
   margin-bottom: 5px;
   font-size: 15px;
-  color: #f59120;
+  color: #ff5600;
   font-weight: 700;
   text-transform: uppercase;
 }
@@ -3682,6 +3682,9 @@ html[xmlns] .car-flexslider .slides {
   -ms-transition: height 500ms ease-in-out;
   -o-transition: height 500ms ease-in-out;
   transition: height 500ms ease-in-out;
+}
+.owl-wrapper-outer img {
+padding-right:10px;
 }
 .owl-carousel .owl-item {
   float: left;

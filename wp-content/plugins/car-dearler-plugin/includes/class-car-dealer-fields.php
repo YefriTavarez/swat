@@ -141,7 +141,7 @@ class Car_Dealer_Fields {
 				'sort' => 30
 			),
 			'color' => array(
-				'label' => __( 'Color Exterior', 'progression-car-dealer' ),
+				'label' => __( 'Color', 'progression-car-dealer' ),
 				'name' => 'color',
 				'type' => 'radio',
 				'choices' => $color_choices,
@@ -152,7 +152,7 @@ class Car_Dealer_Fields {
 				'sort' => 40,
 			),
 			'interior' => array(
-				'label' => __( 'Color Interior', 'progression-car-dealer' ),
+				'label' => __( 'Interior', 'progression-car-dealer' ),
 				'name' => 'interior',
 				'type' => 'radio',
 				'choices' => $int_color_choices,

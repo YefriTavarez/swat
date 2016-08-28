@@ -1,4 +1,4 @@
-<?php 
+3<?php 
 $post = autocar_postData(); $src = ''; 
 $brochure = get_post_meta($post->ID,'autocar_v_brochure',true);
 $brochure = wp_get_attachment_url($brochure, 'full');
@@ -51,7 +51,7 @@ $brochure = wp_get_attachment_url($brochure, 'full');
 				<div class="col-md-6">
 					<div class="car-details">
 						<a href="<?php echo esc_url(get_the_permalink($post->ID)); ?>"><h4><?php the_title(); ?></h4></a>
-						<div class="ac_car_action">
+						<div class="ac_car_ction">
 							<ul>
 								<?php $schedule = get_option('autocar_schedule'); ?>
 								<?php if($schedule == 'enable'){ ?>
