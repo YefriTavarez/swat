@@ -1,4 +1,4 @@
-3<?php 
+<?php 
 $post = autocar_postData(); $src = ''; 
 $brochure = get_post_meta($post->ID,'autocar_v_brochure',true);
 $brochure = wp_get_attachment_url($brochure, 'full');
@@ -19,7 +19,20 @@ $brochure = wp_get_attachment_url($brochure, 'full');
 						<ul class="slides">
 						<?php
 							if(!empty($src)){
-								echo '<li><img src="'.esc_url($src).'" alt="" /></li>';
+								echo '<li>
+									
+									<a href='.esc_url($src).' class="highslide" title="Caption" onclick="return hs.expand(this, config1 )">
+										<img src='.esc_url($src).' alt="" />
+									</a>	
+								</li>';
+								/*echo
+									'<li>
+										<a href='.esc_url($src).' rel="lightbox" >
+											<img  src='.esc_url($src).' alt="" />
+										</a>
+									</li>
+									';*/
+									
 							}
 							$images = get_field( 'images' );
 							if( $images ) {

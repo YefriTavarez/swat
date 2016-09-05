@@ -3684,7 +3684,7 @@ html[xmlns] .car-flexslider .slides {
   transition: height 500ms ease-in-out;
 }
 .owl-wrapper-outer img {
-padding-right:10px;
+  padding-right:0px; /* from 10px to 0px to fix the avatar image in the testimonials */
 }
 .owl-carousel .owl-item {
   float: left;

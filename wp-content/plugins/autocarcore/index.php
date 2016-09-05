@@ -70,7 +70,7 @@ function autocarcore_sliderprice( $field_html, $field ){
 	<input type="hidden" value="<?php echo esc_attr($min); ?>" id="autocarcore_price_min" name="<?php echo $field['name'].'[min]'; ?>" >
 	<input type="hidden" value="<?php echo esc_attr($min + 10000); ?>" id="autocarcore_price_max" name="<?php echo $field['name'].'[max]'; ?>" >
 	<div class="field slider_field">
-		<p><?php esc_html_e('Price Range','autocarcore'); ?></p>
+		<p><?php esc_html_e('Rango de precio','autocarcore'); ?></p>
 		<input id="autocarcore-slider-range" type="text" class="span2" value="" data-slider-min=" <?php echo esc_attr($min); ?>" data-slider-max="<?php echo esc_attr($max); ?>" data-slider-step="5" data-slider-value="[<?php echo esc_attr($min); ?>,<?php echo esc_attr($min + 10000); ?>]"/>
 	</div>
 	<?php

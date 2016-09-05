@@ -18,17 +18,20 @@ if( has_post_thumbnail() ){
 	the_title( '<h4 class="entry-title">', '</h4>' );
 	
 echo '<div class="atc_metadata"><ul>';?>
+		<!-- all these is was commented coz i don't want to see it on the page LV>
 		<li><span><em><?php esc_html_e('Posted by:', 'autocar');?></em>
 		<?php
 		echo '<a href="'.esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ).'">'.esc_html(get_the_author()).'</a>';	
 		?></span></li>
 		<li><?php autocar_posted_on(); ?></li>
+		<-->
 		<?php
 		$facbook = 'https://www.facebook.com/sharer/sharer.php?u='.esc_url(get_permalink());
 		$twitter = 'https://twitter.com/home?status='.esc_url(get_permalink());
 		$linkdin = 'https://www.linkedin.com/shareArticle?mini=true&url='.esc_url(get_permalink()).'&title=&summary=&source=';
-		echo '<li><em>'.esc_html__('Categories:', 'autocar').'</em>'.get_the_category_list( ',').'</li>
-		<li><span><em>'.esc_html__('Share on:', 'autocar').'</em>
+		//Next line was removed coz i don't like to see it neither LV
+		// echo '<li><em>'.esc_html__('Categories:', 'autocar').'</em>'.get_the_category_list( ',').'</li>
+		echo'<li><span><em>'.esc_html__('Share on:', 'autocar').'</em>
 		<a href="'.esc_url( $facbook ).'">'.esc_html__('Facebook', 'autocar').'</a>,
 		<a href="'.esc_url( $twitter ).'">'.esc_html__('Twitter', 'autocar').'</a>,
 		<a href="'.esc_url( $linkdin ).'"> '.esc_html__('Linkedin', 'autocar').'</a></span></li>
