@@ -68,11 +68,37 @@ function autocarcore_sliderprice( $field_html, $field ){
 	ob_start();
 	?>
 	<input type="hidden" value="<?php echo esc_attr($min); ?>" id="autocarcore_price_min" name="<?php echo $field['name'].'[min]'; ?>" >
-	<input type="hidden" value="<?php echo esc_attr($min + 10000); ?>" id="autocarcore_price_max" name="<?php echo $field['name'].'[max]'; ?>" >
+	<input type="hidden" value="<?php echo esc_attr($max); ?>" id="autocarcore_price_max" name="<?php echo $field['name'].'[max]'; ?>" >
 	<div class="field slider_field">
 		<p><?php esc_html_e('Rango de precio','autocarcore'); ?></p>
-		<input id="autocarcore-slider-range" type="text" class="span2" value="" data-slider-min=" <?php echo esc_attr($min); ?>" data-slider-max="<?php echo esc_attr($max); ?>" data-slider-step="5" data-slider-value="[<?php echo esc_attr($min); ?>,<?php echo esc_attr($min + 10000); ?>]"/>
+		<input id="autocarcore-slider-range" type="text" class="span2" value="" data-slider-min=" <?php echo esc_attr($min); ?>" data-slider-max="<?php echo esc_attr($max); ?>" data-slider-step="5" data-slider-value="[<?php echo esc_attr($min); ?>,<?php echo esc_attr($min + 10000000); ?>]"/>
 	</div>
+	<script type="text/javascript">
+		var model_select = document.getElementById("car_dealer_field_model");
+		var options = model_select.getElementsByTagName("option");
+
+		setTimeout(function(){
+			for(index = 1; index < options.length; index++){
+				options[index].hidden = true;				
+			}
+		},2000);
+
+		make_select = document.getElementById("car_dealer_field_make");
+
+		if("All" == make_select.options[make_select.selectedIndex].innerHTML){
+			options[0].innerHTML ="Selecione una marca";
+		} else {
+			options[0].innerHTML ="All";
+		}
+
+		make_select.onchange = function(){
+			if("All" == make_select.options[make_select.selectedIndex].innerHTML){
+				options[0].innerHTML ="Selecione una marca";
+			} else {
+				options[0].innerHTML ="All";
+			}
+		}
+	</script>
 	<?php
 	return ob_get_clean();
 }

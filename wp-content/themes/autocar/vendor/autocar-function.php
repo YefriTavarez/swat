@@ -527,7 +527,8 @@ function autocar_compare_itemsadd(){
 	echo '<div class="col-md-3">';
 		echo '<div class="ac_compare_wrapper">';
 			echo '<div class="compare_heading">';
-				echo '<a href="',esc_url( home_url() ),'" class="compare_link"><i class="fa fa-plus"></i>',esc_html__('Agregar
+				//echo '<a href="',esc_url( home_url()+"/list-view" ),'" class="compare_link"><i class="fa fa-plus"></i>',esc_html__('Agregar
+				echo '<a href="http://swatimport.com/inventory/?price%5Bmin%5D=620000&price%5Bmax%5D=2530000&post_type=vehicle" class="compare_link"><i class="fa fa-plus"></i>',esc_html__('Agregar
 				Comparar','autocar'),'</a>';
 			echo '</div>';
 			echo '<div class="ac_car_property">';

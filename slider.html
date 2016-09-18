@@ -5,12 +5,41 @@
 
 <title>Highslide JS - Custom Example</title>
 
-<script type="text/javascript" src="http://swatimport.com/wp-content/plugins/highslide/highslide-full.js"></script>
-<script type="text/javascript" src="http://swatimport.com/wp-content/plugins/highslide/highslide.config.js" charset="utf-8"></script>
-<link rel="stylesheet" type="text/css" href="http://swatimport.com/wp-content/plugins/highslide/highslide.css" />
+<script type="text/javascript" src="http://swatimport.com/highslide/highslide-full.js"></script>
+<link rel="stylesheet" type="text/css" href="http://swatimport.com/highslide/highslide.css" />
 <!--[if lt IE 7]>
-<link rel="stylesheet" type="text/css" href="http://swatimport.com/wp-content/plugins/highslide/highslide-ie6.css" />
+<link rel="stylesheet" type="text/css" href="http://swatimport.com/highslide/highslide-ie6.css" />
 <![endif]-->
+<script type="text/javascript">
+	hs.graphicsDir = 'http://swatimport.com/wp-content/plugins/highslide/';
+	hs.align = 'center';
+	hs.transitions = ['expand', 'crossfade'];
+	hs.fadeInOut = true;
+	hs.dimmingOpacity = 0.8;
+	hs.outlineType = 'rounded-white';
+	hs.captionEval = 'this.thumb.alt';
+	hs.marginBottom = 105; // make room for the thumbstrip and the controls
+	hs.numberPosition = 'caption';
+
+	// Add the slideshow providing the controlbar and the thumbstrip
+	hs.addSlideshow({
+		//slideshowGroup: 'group1',
+		interval: 5000,
+		repeat: false,
+		useControls: true,
+		overlayOptions: {
+			className: 'text-controls',
+			position: 'top center',
+			relativeTo: 'image',
+			offsetY: -60
+		},
+		thumbstrip: {
+			position: 'top center',
+			mode: 'horizontal',
+			relativeTo: 'image'
+		}
+	});
+</script>
 
 </head>
 <body>
@@ -20,70 +49,69 @@
 	<li>
 	<a href="http://swatimport.com/wp-content/plugins/highslide/sample-images/thumbstrip01.jpg" class="highslide" 
 			title="Caption from the anchor's title attribute" 
-			onclick="return hs.expand(this, config1 )">
+			onclick="return hs.expand(this, config1)">
 		<img src="http://swatimport.com/wp-content/plugins/highslide/sample-images/thumbstrip01.thumb.jpg"  alt=""/>
 	</a>
 	</li>
 	<li>
 	<a href="http://swatimport.com/wp-content/plugins/highslide/sample-images/thumbstrip02.jpg" class="highslide" 
 			title="Caption from the anchor's title attribute" 
-			onclick="return hs.expand(this, config1 )">
+			onclick="return hs.expand(this)">
 		<img src="http://swatimport.com/wp-content/plugins/highslide/sample-images/thumbstrip02.thumb.jpg"  alt=""/>
 	</a>
 	</li>
 	<li>
-	<a href="http://swatimport.com/wp-content/plugins/highslide/sample-images/thumbstrip12.jpg" class="highslide" 
-			title="Caption from the anchor's title attribute" 
-			onclick="return hs.expand(this, config1 )">
+	<a href="http://swatimport.com/wp-content/plugins/highslide/sample-images/thumbstrip12.jpg" class="highslide" title="Caption from the anchor's title attribute" 
+			onclick="return hs.expand(this)">
 		<img src="http://swatimport.com/wp-content/plugins/highslide/sample-images/thumbstrip12.thumb.jpg"  alt=""/>
 	</a>
 	</li>
 	<li>
 	<a href="http://swatimport.com/wp-content/plugins/highslide/sample-images/thumbstrip07.jpg" class="highslide" 
 			title="Caption from the anchor's title attribute" 
-			onclick="return hs.expand(this, config1 )">
+			onclick="return hs.expand(this)">
 		<img src="http://swatimport.com/wp-content/plugins/highslide/sample-images/thumbstrip07.thumb.jpg"  alt=""/>
 	</a>
 	</li>
 	<li>
 	<a href="http://swatimport.com/wp-content/plugins/highslide/sample-images/thumbstrip22.jpg" class="highslide" 
 			title="Caption from the anchor's title attribute" 
-			onclick="return hs.expand(this, config1 )">
+			onclick="return hs.expand(this)">
 		<img src="http://swatimport.com/wp-content/plugins/highslide/sample-images/thumbstrip22.thumb.jpg"  alt=""/>
 	</a>
 	</li>
 	<li>
 	<a href="http://swatimport.com/wp-content/plugins/highslide/sample-images/thumbstrip24.jpg" class="highslide" 
 			title="Caption from the anchor's title attribute" 
-			onclick="return hs.expand(this, config1 )">
+			onclick="return hs.expand(this)">
 		<img src="http://swatimport.com/wp-content/plugins/highslide/sample-images/thumbstrip24.thumb.jpg"  alt=""/>
 	</a>
 	</li>
 	<li>
 	<a href="http://swatimport.com/wp-content/plugins/highslide/sample-images/thumbstrip03.jpg" class="highslide" 
 			title="Caption from the anchor's title attribute" 
-			onclick="return hs.expand(this, config1 )">
+			onclick="return hs.expand(this)">
 		<img src="http://swatimport.com/wp-content/plugins/highslide/sample-images/thumbstrip03.thumb.jpg"  alt=""/>
 	</a>
 	</li>
 	<li>
 	<a href="http://swatimport.com/wp-content/plugins/highslide/sample-images/thumbstrip05.jpg" class="highslide" 
 			title="Caption from the anchor's title attribute" 
-			onclick="return hs.expand(this, config1 )">
+			onclick="return hs.expand(this)">
 		<img src="http://swatimport.com/wp-content/plugins/highslide/sample-images/thumbstrip05.thumb.jpg"  alt=""/>
 	</a>
 	</li>
 	<li>
 	<a href="http://swatimport.com/wp-content/plugins/highslide/sample-images/thumbstrip06.jpg" class="highslide" 
 			title="Caption from the anchor's title attribute" 
-			onclick="return hs.expand(this, config1 )">
+			onclick="return hs.expand(this)">
 		<img src="http://swatimport.com/wp-content/plugins/highslide/sample-images/thumbstrip06.thumb.jpg"  alt=""/>
 	</a>
 	</li>
 	<li>
 	<a href="http://swatimport.com/wp-content/plugins/highslide/sample-images/thumbstrip08.jpg" class="highslide" 
 			title="Caption from the anchor's title attribute" 
-			onclick="return hs.expand(this, config1 )">
+			onclick="return hs.expand(this)">
 		<img src="http://swatimport.com/wp-content/plugins/highslide/sample-images/thumbstrip08.thumb.jpg"  alt=""/>
 	</a>
 	</li>

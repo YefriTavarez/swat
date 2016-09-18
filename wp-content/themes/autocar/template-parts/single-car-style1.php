@@ -19,25 +19,20 @@ $brochure = wp_get_attachment_url($brochure, 'full');
 						<ul class="slides">
 						<?php
 							if(!empty($src)){
-								echo '<li>
-									
-									<a href='.esc_url($src).' class="highslide" title="Caption" onclick="return hs.expand(this, config1 )">
-										<img src='.esc_url($src).' alt="" />
-									</a>	
-								</li>';
-								/*echo
+								$url_open = "'http://swatimport.com/zoom-in.php?url=".esc_url($src)."'";
+								echo
 									'<li>
-										<a href='.esc_url($src).' rel="lightbox" >
-											<img  src='.esc_url($src).' alt="" />
-										</a>
+										
+										<img  src="'.esc_url($src).'" alt="" onclick="openView(' . $url_open . ');"/>
+										
 									</li>
-									';*/
-									
+									';
 							}
 							$images = get_field( 'images' );
 							if( $images ) {
 								foreach($images as $image){
-									echo '<li><img src="'.esc_url($image['sizes']['large']).'" alt="" />','</li>';
+									$image_url = "'http://swatimport.com/zoom-in.php?url=".esc_url($image['sizes']['large'])."'";
+									echo '<li><img onclick="openView(' . $image_url . ');" src="'.esc_url($image['sizes']['large']).'" alt="" />','</li>';
 								}
 							}
 						?>
@@ -109,7 +104,93 @@ $brochure = wp_get_attachment_url($brochure, 'full');
 		</div>
 	</div>
 </div>
+<script type="text/javascript">
+	var span = document.createElement('span');
+	var next = document.createElement('span');
+	var previous = document.createElement('span');
 
+	var iframe = document.createElement('iframe');
+
+	var carousel = document.getElementById("car-carousel");
+	var image_list = carousel.getElementsByTagName("img");
+
+	function openView(url){
+		document.body.appendChild(span);
+		span.innerHTML = "&times;";
+		span.onclick = function(){ closeMe();}
+
+		span.id = "cerrar";
+
+		document.body.appendChild(iframe);
+		iframe.src = url;
+		iframe.className = "car-viewer";
+		iframe.id = "carviewer";
+
+		document.body.appendChild(previous);
+		previous.innerHTML = "❮";
+		previous.src = url;
+		previous.className = "next-previous";
+		previous.id = "previous";
+		previous.onclick = function (){
+			current_image = iframe.src.split("url=")[1];
+			for(index = 0; index < image_list.length; index ++){
+				if(current_image == image_list[index].getAttribute("src")){
+					
+					if(index == 0){
+						console.log("this was the first image");
+						iframe.src = "http://swatimport.com/zoom-in.php?url=" + image_list[image_list.length - 1].getAttribute("src");
+					} else {
+						console.log("http://swatimport.com/zoom-in.php?url=" + image_list[index - 1].getAttribute("src"));
+						iframe.src = "http://swatimport.com/zoom-in.php?url=" + image_list[index - 1].getAttribute("src");
+					}
+
+					break;
+				}
+			}			
+		};
+
+		document.body.appendChild(next);
+		next.innerHTML = "❯";
+		next.src = url;
+		next.className = "next-previous";
+		next.id = "next";
+		next.onclick = function(){
+			current_image = iframe.src.split("url=")[1];
+			for(index = 0; index < image_list.length; index ++){
+				if(current_image == image_list[index].getAttribute("src")){
+					
+					if(index == (image_list.length - 1)){
+						console.log("this was the first image");
+						iframe.src = "http://swatimport.com/zoom-in.php?url=" + image_list[0].getAttribute("src");
+					} else {
+						iframe.src = "http://swatimport.com/zoom-in.php?url=" + image_list[index + 1].getAttribute("src");
+					}
+
+					break;
+				}
+			}
+		};
+
+		divs = document.getElementsByClassName("sidebar-menu-inner");
+		for(index = 0; index < divs.length; index ++){
+			//divs[index].style = "display: none;";
+		}
+
+	}
+
+	function closeMe(){
+		document.getElementById("carviewer").remove();
+		document.getElementById("cerrar").remove();
+		document.getElementById("previous").remove();
+		document.getElementById("next").remove();
+
+		divs = document.getElementsByClassName("sidebar-menu-inner");
+		for(index = 0; index < divs.length; index ++){
+			//divs[index].style = "display: block;";
+		}
+	}
+	
+</script>
 <!-- similer car -->
 <?php get_template_part( 'template-parts/similer','car' ); ?>
 <!-- similer car -->

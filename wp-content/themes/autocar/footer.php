@@ -42,6 +42,8 @@ $copyright = '';
 		</nav>
 	</div>
 <?php wp_footer();?>
-
+<script type="text/javascript">
+	window.scrollTo(0, 0);
+</script>
 </body>
 </html>
